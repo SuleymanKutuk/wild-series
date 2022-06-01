@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Category !
+{% endblock %}
+
+{% block body %}
+
+	<a href="  {{  path ('category_index') }}"></a>
+
+
+	<ul>
+
+		<li>
+			<a class="btn btn-outline-dark" href="{{ path('category_show', {'categoryName' : 'Action' }) }}">Action</a>
+		</li>
+	</br>
+	<li>
+		<a class="btn btn-outline-dark" href="{{ path('category_show', {'categoryName' : 'Aventure' }) }}">Aventure</a>
+	</li>
+</br>
+<li>
+	<a class="btn btn-outline-dark" href="{{ path('category_show', {'categoryName' : 'Animation' }) }}">Animation</a>
+</li></br><li>
+<a class="btn btn-outline-dark" href="{{ path('category_show', {'categoryName' : 'Fantastique' }) }}">Fantastique</a></li></br><li><a class="btn btn-outline-dark" href="{{ path('category_show', {'categoryName' : 'Horreur' } ) }}">Horreur</a></li></br></ul>{% endblock %}

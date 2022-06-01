@@ -27,13 +27,19 @@
 					</a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 						<li>
-							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="{{ path('category_show', {'categoryName' : 'Action' }) }}">Action</a>
 						</li>
 						<li>
-							<a class="dropdown-item" href="#">Another action</a>
+							<a class="dropdown-item" href="{{ path('category_show', {'categoryName' : 'Aventure' }) }}">Aventure</a>
 						</li>
 						<li>
-							<a class="dropdown-item" href="#">Something else here</a>
+							<a class="dropdown-item" href="{{ path('category_show', {'categoryName' : 'Animation' }) }}">Animation</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="{{ path('category_show', {'categoryName' : 'Fantastique' }) }}">Fantastique</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="{{ path('category_show', {'categoryName' : 'Horreur' }) }}">Horreur</a>
 						</li>
 					</ul>
 				</li>
@@ -57,6 +63,9 @@
 			</ul>
 			<li class="nav-item ">
 				<a class="nav-link active" aria-current="page" href="#">Mes Favoris</a>
+			</li>
+			<li class="nav-item ">
+				<a class="nav-link active" aria-current="page" href="{{path ('program_index')}}">Mes programes</a>
 			</li>
 
 			<ul class="navbar-nav ml-auto">

@@ -18,16 +18,8 @@
 			<meta name="theme-color" content="#ffffff">
 		{% endblock %}
 		{% include "main/navbar.html.twig" %}
-		<a href"/" type="button" class="btn btn-light">Acceuil</a>
-		{% block stylesheets %}
-			{{ encore_entry_link_tags('app') }}
-		{% endblock %}
-
-		{% block javascripts %}
-			{{ encore_entry_script_tags('app') }}
-		{% endblock %}
+		<a class="btn btn-outline-dark" href="{{ path ('app_index') }}">Accueil</a>
 	</head>
-	<body>
-		{% block body %}{% endblock %}
-	</body>
-</html>
+</html></br>{% block stylesheets %}
+{{ encore_entry_link_tags('app') }}{% endblock %}{% block javascripts %}
+{{ encore_entry_script_tags('app') }}{% endblock %}</head><body>{% block body %}{% endblock %}</body></html>
