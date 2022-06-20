@@ -6,19 +6,24 @@
 {% block body %}
 
 	<a href="  {{  path ('category_index') }}"></a>
+</br>
 
 
-	<ul>
+<div>
+	<h2>
+		{% for category in categories %}
+			<div>
+				<h2 class="btn btn-secondary">
+					Catégorie :
+					{{ category.name }}</h2>
+			</br>
 
-		<li>
-			<a class="btn btn-outline-dark" href="{{ path('category_show', {'categoryName' : 'Action' }) }}">Action</a>
-		</li>
-	</br>
-	<li>
-		<a class="btn btn-outline-dark" href="{{ path('category_show', {'categoryName' : 'Aventure' }) }}">Aventure</a>
-	</li>
+			<a href="{{ path("category_show", { categoryName: category.name }) }}" class="btn btn-link">Voir la categorie</a>
+		</div>
+	{% endfor %}
+
+
 </br>
 <li>
-	<a class="btn btn-outline-dark" href="{{ path('category_show', {'categoryName' : 'Animation' }) }}">Animation</a>
-</li></br><li>
-<a class="btn btn-outline-dark" href="{{ path('category_show', {'categoryName' : 'Fantastique' }) }}">Fantastique</a></li></br><li><a class="btn btn-outline-dark" href="{{ path('category_show', {'categoryName' : 'Horreur' } ) }}">Horreur</a></li></br></ul>{% endblock %}
+	<a class="btn btn-outline-dark" href="{{ path('category_new') }}">Add category</a>
+</li>{% endblock %}
